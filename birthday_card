@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تبریک تولد به پدر</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Vazirmatn', sans-serif;
+      background: url('https://i.imgur.com/Ko5UDhv.jpg') center/cover no-repeat;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      direction: rtl;
+    }
+    .envelope {
+      background: #fef4e8;
+      padding: 2rem;
+      border: 2px solid #c0a57b;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .envelope:hover {
+      transform: scale(1.02);
+    }
+    .letter {
+      display: none;
+      margin-top: 1rem;
+      line-height: 2;
+      font-size: 1.1rem;
+      white-space: pre-line;
+    }
+    .fade-in {
+      animation: fadeIn 2s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope" id="envelope">
+    <strong>برای پدر عزیزم، از طرف محمد</strong>
+    <div class="letter" id="letter">
+      پدر عزیزم،تو همیشه پشت‌وپناه زندگی من بودی؛ مردی که با مهرش، صبوری‌اش، و قلب بزرگش به من یاد داد چطور با افتخار زندگی کنم.
+  امروز تولد توست، اما من خوش‌شانس‌ترینم که هر روز کنار تو بودن را جشن می‌گیرم.
+
+  از ته دل، تولدت مبارک پدر قهرمانم.
+
+  با تمام عشقم،
+  محمد
+</div>
+
+  </div>
+  <audio id="bgMusic" src="https://cdn.pixabay.com/download/audio/2023/03/14/audio_6f74f68fd9.mp3?filename=soft-piano-141997.mp3"></audio>
+  <script>
+    const envelope = document.getElementById('envelope');
+    const letter = document.getElementById('letter');
+    const music = document.getElementById('bgMusic');envelope.addEventListener('click', () => {
+  letter.style.display = 'block';
+  letter.classList.add('fade-in');
+  music.play();
+});
+
+  </script>
+</body>
+</html>
